@@ -82,10 +82,69 @@ def repeat(string, count):
     return result
 
 print(repeat("python", 5))
+
 # Task 7: Student Scores, Using **kwargs
+def student_scores(operation, **kwargs):
+    try:
+        if not kwargs:
+            return ValueError("No student scores provided")
+        if operation == "mean":
+            return sum(kwargs.values()) / len(kwargs)
+        elif operation == "best":
+            return max(kwargs, key=kwargs.get)
+        else:
+            return f"Unsupported operation: {operation}"
+    except (TypeError, ValueError):
+        return "Invalid data was provided"
+    
+print(student_scores("mean", Anna=75, Marina=89, Denis=91))
+print(student_scores("best", Anna=75, Marina=89, Denis=91))
+print(student_scores("mean"))
 
 # Task 8: Titleize, with String and List Operations
+def titleize(sentence):
+    little_words = {"a", "on", "an", "the", "of", "and", "is", "in"}
+    words = sentence.split()
+
+    for i, word in enumerate(words):
+        if i == 0 or i == len(words) - 1 or word.lower() not in little_words:
+            words[i] = word.capitalize()
+        else:
+            words[i] = word.lower()
+    return " ".join(words)
+
+print(titleize("my name is anna, i am a developer."))
 
 # Task 9: Hangman, with more String Operations
+def hangman(secret, guess):
+    result = ""
+    for letter in secret:
+        if letter in guess:
+            result += letter
+        else:
+            result += "_"
+    return result
+
+print(hangman("alphabet", "ab"))
 
 # Task 10: Pig Latin, Another String Manipulation Exercise
+def pig_latin(sentence):
+    vowels = "aeiou"
+    words = sentence.split()
+    result = []
+
+    for word in words:
+        if word[0] in vowels:
+            result.append(word + "ay")
+        elif "qu" in word[:3]:
+            qu_index = word.index("qu")
+            result.append(word[qu_index + 2:] + word[:qu_index + 2] + "ay")
+        else:
+            for i, letter in enumerate(word):
+                if letter in vowels:
+                    result.append(word[i:] + word[:i] + "ay")
+                    break
+
+    return " ".join(result)
+
+print(pig_latin("quick"))
