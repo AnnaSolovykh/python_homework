@@ -3,7 +3,7 @@ import pandas as pd
 
 conn = sqlite3.connect("../db/lesson.db")
 
-# --- TASK 4 ---
+# --- TASK 5 ---
 query = """
 SELECT
     line_items.line_item_id,
