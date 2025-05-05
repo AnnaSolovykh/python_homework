@@ -1,7 +1,6 @@
 import sqlite3 
 
 # Connect to the database
-
 def add_student(cursor, name, age, major):
     try:
         cursor.execute("INSERT INTO Students (name, age, major) VALUES (?,?,?)", (name, age, major))

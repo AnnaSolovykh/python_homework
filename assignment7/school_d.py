@@ -3,7 +3,6 @@ import sqlite3
 with sqlite3.connect("../db/school.db") as conn:
     cursor = conn.cursor()
 
-    # JOIN-запрос: студент + курс
     cursor.execute("""
     SELECT Students.name, Courses.course_name
     FROM Enrollments
