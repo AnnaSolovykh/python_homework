@@ -116,6 +116,28 @@ try:
     conn.commit()
     print("Data inserted successfully.")
 
+    # --- TASK 4 - SQL QUERIES ---
+
+    print("\nAll subscribers:")
+    cursor.execute("SELECT * FROM subscribers")
+    for row in cursor.fetchall():
+        print(row)
+
+    print("\nAll magazines ordered alphabetically:")
+    cursor.execute("SELECT * FROM magazines ORDER BY title")
+    for row in cursor.fetchall():
+        print(row)
+
+    print("\nMagazines from 'NatGeo Media':")
+    cursor.execute("""
+        SELECT m.magazine_id, m.title, p.name AS publisher_name
+        FROM magazines m
+        JOIN publishers p ON m.publisher_id = p.publisher_id
+        WHERE p.name = ?
+    """, ("NatGeo Media",))
+    for row in cursor.fetchall():
+        print(row)
+
 except sqlite3.Error as e:
     print(f"An error occurred: {e}")
 
