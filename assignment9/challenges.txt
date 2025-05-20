@@ -1,0 +1,3 @@
+Task 6: Scraping Structured Data — Challenges
+
+I didn’t encounter any major issues while completing this task. To make sure the XPath selector was accurate, I added extra checks to catch any items with missing text or links. As it turned out, all the extracted elements were valid and complete. This confirmed that the data on the OWASP page is well-structured, and the scraping logic was reliable without requiring extra error handling.
