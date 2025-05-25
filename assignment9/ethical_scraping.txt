@@ -1,0 +1,42 @@
+TASK 5
+Ethical Web Scraping
+====================
+
+1. Which sections of the Wikipedia website are restricted for crawling?
+
+The robots.txt file 
+explicitly disallows many paths, including:
+
+- /w/
+- /api/
+- /trap/
+- /wiki/Special:
+- /wiki/Talk:
+- /wiki/Wikipedia:
+- /wiki/User:
+- /wiki/Media:
+- /wiki/Template:
+- /wiki/File:
+- /wiki/Portal:
+- Many language-specific search pages (e.g., /wiki/%D8%AE%D8%A7%D8%B5:Search for Arabic)
+- Numerous Wikipedia project pages related to deletion, arbitration, copyright, administrator tools, etc.
+
+These restrictions help protect administrative pages, internal systems, and reduce server load from bots.
+
+2. Are there specific rules for certain user agents?
+
+Yes. The robots.txt file lists specific rules for many user agents. Some are completely blocked, such as:
+
+- MJ12bot
+- wget
+- HTTrack
+- WebReaper
+- NPBot
+- Download Ninja
+- Mediapartners-Google*
+
+Others, like Wikipedia's own bots (e.g. IsraBot, Orthogaffe), are allowed with no restrictions. Some agents have custom rules due to their behavior.
+
+3. Why do websites use robots.txt?
+
+Websites use robots.txt to control which parts of their content can be crawled by automated bots. It helps reduce traffic overload, protect sensitive or non-public content, and maintain system stability. Ethical scraping involves respecting these rules to ensure cooperation with site owners and avoid abuse.

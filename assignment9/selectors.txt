@@ -1,0 +1,7 @@
+TASK 1: robots.txt reviewed — scraping public pages is allowed
+
+TASK 2
+List item class: li.cp-search-result-item
+Title selector: h2.cp-title a
+Author selector(s): a.author-link
+Format & year: div.cp-format-info
