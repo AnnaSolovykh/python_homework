@@ -1,5 +1,5 @@
 """
-Assignment 12 - Task 2: A Decorator that Takes an Argument
+Task 2: A Decorator that Takes an Argument
 """
 
 import functools

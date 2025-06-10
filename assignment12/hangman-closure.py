@@ -1,5 +1,5 @@
 """
-Assignment 12 - Task 4: Closure 
+Task 4: Closure 
 """
 
 # Task 4
