@@ -1,0 +1,10 @@
+function: hello_world positional parameters: none keyword parameters: none return: None
+function: variable_positional positional parameters: [1, 2, 3, 'test'] keyword parameters: none return: True
+function: variable_keyword positional parameters: none keyword parameters: {'name': 'John', 'age': 25, 'city': 'New York'} return: <function logger_decorator at 0x100fab740>
+function: variable_positional positional parameters: none keyword parameters: none return: True
+function: variable_keyword positional parameters: none keyword parameters: none return: <function logger_decorator at 0x100fab740>
+function: hello_world positional parameters: none keyword parameters: none return: None
+function: variable_positional positional parameters: [1, 2, 3, 'test'] keyword parameters: none return: True
+function: variable_keyword positional parameters: none keyword parameters: {'name': 'John', 'age': 25, 'city': 'New York'} return: <function logger_decorator at 0x1023db740>
+function: variable_positional positional parameters: none keyword parameters: none return: True
+function: variable_keyword positional parameters: none keyword parameters: none return: <function logger_decorator at 0x1023db740>
